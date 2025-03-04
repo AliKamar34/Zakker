@@ -13,7 +13,12 @@ class CustomNavBar extends StatefulWidget {
 
 class _CustomNavBarState extends State<CustomNavBar> {
   int selectedIndex = 0;
-  static const List<Widget> pages = [HomeView(), HomeView(), HomeView()];
+  static const List<Widget> pages = [
+    HomeView(),
+    HomeView(),
+    HomeView(),
+    HomeView(),
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,9 +45,10 @@ class _CustomNavBarState extends State<CustomNavBar> {
             tabBackgroundColor: AppColors.primaryColor.withAlpha(50),
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
             tabs: [
-              GButton(icon: FlutterIslamicIcons.quran2, iconSize: 32),
+              GButton(icon: Icons.home_rounded, iconSize: 32),
               GButton(icon: FlutterIslamicIcons.tasbih2, iconSize: 32),
               GButton(icon: FlutterIslamicIcons.sajadah, iconSize: 32),
+              GButton(icon: FlutterIslamicIcons.prayer, iconSize: 32),
             ],
             selectedIndex: selectedIndex,
             onTabChange: (index) {
