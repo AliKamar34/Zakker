@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:zaker/core/utils/app_colors.dart';
 import 'package:zaker/core/utils/app_routes.dart';
 
 void main() {
@@ -13,6 +14,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       routerConfig: AppRoutes.router,
+      theme: ThemeData.light(
+        useMaterial3: false,
+      ).copyWith(scaffoldBackgroundColor: AppColors.scaffoldColor),
     );
   }
 }
