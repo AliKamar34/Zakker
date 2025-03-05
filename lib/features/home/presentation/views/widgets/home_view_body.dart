@@ -15,7 +15,7 @@ class HomeViewBody extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         spacing: 15,
         children: [
-          Center(child: Text('ذكر', style: TextStyle(fontSize: 26))),
+          Center(child: Text('ذَكِّرْ', style: TextStyle(fontSize: 26))),
           Text('السلام عليكم ', style: TextStyle(fontSize: 20)),
           CustomContainer(
             child: ListTile(

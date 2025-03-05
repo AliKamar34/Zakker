@@ -31,9 +31,11 @@ dependencies:
   cupertino_icons: ^1.0.8
   flutter:
     sdk: flutter
-  flutter_localizations:
-    sdk: flutter  
   flutter_islamic_icons: ^1.0.2
+  flutter_launcher_icons: ^0.14.3
+  flutter_localizations:
+    sdk: flutter
+  flutter_native_splash: ^2.4.5
   flutter_svg: ^2.0.17
   go_router: ^14.8.1
   google_nav_bar: ^5.0.7
@@ -68,9 +70,9 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-   - family: me_quran
-     fonts:
-     - asset: assets/fonts/me_quran.ttf
+    - family: me_quran
+      fonts:
+        - asset: assets/fonts/me_quran.ttf
     # - family: Schyler
     #   fonts:
     #     - asset: fonts/Schyler-Regular.ttf
@@ -84,3 +86,15 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
+flutter_native_splash:
+  image: assets/images/app_logo.png
+  color: "#E5B6F2"
+  android_12:
+    image: assets/images/app_logo.png
+    color: "#E5B6F2"
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/images/app_logo.png"
+  min_sdk_android: 21 # android min sdk min:16, default 21
