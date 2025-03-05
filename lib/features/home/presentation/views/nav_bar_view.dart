@@ -3,6 +3,7 @@ import 'package:flutter_islamic_icons/flutter_islamic_icons.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:zaker/core/utils/app_colors.dart';
 import 'package:zaker/features/home/presentation/views/home_view.dart';
+import 'package:zaker/features/sebha/presentation/views/sebha_view.dart';
 
 class CustomNavBar extends StatefulWidget {
   const CustomNavBar({super.key});
@@ -15,7 +16,7 @@ class _CustomNavBarState extends State<CustomNavBar> {
   int selectedIndex = 0;
   static const List<Widget> pages = [
     HomeView(),
-    HomeView(),
+    SebhaView(),
     HomeView(),
     HomeView(),
   ];

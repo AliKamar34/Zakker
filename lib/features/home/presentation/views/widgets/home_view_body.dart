@@ -18,15 +18,18 @@ class HomeViewBody extends StatelessWidget {
           Center(child: Text('ذَكِّرْ', style: TextStyle(fontSize: 26))),
           Text('السلام عليكم ', style: TextStyle(fontSize: 20)),
           CustomContainer(
-            child: ListTile(
-              leading: Icon(
-                FlutterIslamicIcons.sajadah,
-                size: 60,
-                color: Colors.white,
-              ),
-              title: Text(
-                'المصحف الشريف',
-                style: TextStyle(color: Colors.white),
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 40),
+              child: ListTile(
+                leading: Icon(
+                  FlutterIslamicIcons.sajadah,
+                  size: 60,
+                  color: Colors.white,
+                ),
+                title: Text(
+                  'المصحف الشريف',
+                  style: TextStyle(color: Colors.white),
+                ),
               ),
             ),
           ),
