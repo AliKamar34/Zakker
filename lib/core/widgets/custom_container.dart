@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'package:zaker/core/utils/app_colors.dart';
 
 class CustomContainer extends StatelessWidget {
@@ -8,13 +9,14 @@ class CustomContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: AppColors.primaryColor,
+        gradient: LinearGradient(
+          colors: [AppColors.secondaryColor, AppColors.primaryColor],
+          begin: Alignment.topRight,
+          end: Alignment.bottomLeft,
+        ),
         borderRadius: BorderRadius.circular(20),
       ),
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 40),
-        child: child,
-      ),
+      child: child,
     );
   }
 }

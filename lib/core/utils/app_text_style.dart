@@ -4,8 +4,49 @@ abstract class AppTextStyle {
   static TextStyle styleRegular10(context) {
     return TextStyle(
       fontSize: getResponsiveFontSize(context, fontSize: 10),
-
       fontWeight: FontWeight.w400,
+    );
+  }
+
+  static TextStyle styleRegular14(context) {
+    return TextStyle(
+      fontSize: getResponsiveFontSize(context, fontSize: 14),
+      fontWeight: FontWeight.w400,
+    );
+  }
+
+  static TextStyle styleRegular16(context) {
+    return TextStyle(
+      fontSize: getResponsiveFontSize(context, fontSize: 16),
+      fontWeight: FontWeight.w400,
+    );
+  }
+
+  static TextStyle styleRegular18(context) {
+    return TextStyle(
+      fontSize: getResponsiveFontSize(context, fontSize: 18),
+      fontWeight: FontWeight.w400,
+    );
+  }
+
+  static TextStyle styleMediem16(context) {
+    return TextStyle(
+      fontSize: getResponsiveFontSize(context, fontSize: 16),
+      fontWeight: FontWeight.w600,
+    );
+  }
+
+  static TextStyle styleMediem18(context) {
+    return TextStyle(
+      fontSize: getResponsiveFontSize(context, fontSize: 18),
+      fontWeight: FontWeight.w600,
+    );
+  }
+
+  static TextStyle styleMediem20(context) {
+    return TextStyle(
+      fontSize: getResponsiveFontSize(context, fontSize: 20),
+      fontWeight: FontWeight.w600,
     );
   }
 }
