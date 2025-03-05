@@ -38,15 +38,21 @@ class HomeViewBody extends StatelessWidget {
               GoRouter.of(context).push(AppRoutes.quraanView);
             },
             child: CustomContainer(
-              child: ListTile(
-                leading: Icon(
-                  FlutterIslamicIcons.quran2,
-                  size: 60,
-                  color: Colors.white,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 10,
+                  vertical: 40,
                 ),
-                title: Text(
-                  'المصحف الشريف',
-                  style: TextStyle(color: Colors.white),
+                child: ListTile(
+                  leading: Icon(
+                    FlutterIslamicIcons.quran2,
+                    size: 60,
+                    color: Colors.white,
+                  ),
+                  title: Text(
+                    'المصحف الشريف',
+                    style: TextStyle(color: Colors.white),
+                  ),
                 ),
               ),
             ),
@@ -54,15 +60,21 @@ class HomeViewBody extends StatelessWidget {
           InkWell(
             onTap: () {},
             child: CustomContainer(
-              child: ListTile(
-                leading: Icon(
-                  FlutterIslamicIcons.prayer,
-                  size: 60,
-                  color: Colors.white,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 10,
+                  vertical: 40,
                 ),
-                title: Text(
-                  'اذكار عشوائيه  ',
-                  style: TextStyle(color: Colors.white),
+                child: ListTile(
+                  leading: Icon(
+                    FlutterIslamicIcons.prayer,
+                    size: 60,
+                    color: Colors.white,
+                  ),
+                  title: Text(
+                    'اذكار عشوائيه  ',
+                    style: TextStyle(color: Colors.white),
+                  ),
                 ),
               ),
             ),
