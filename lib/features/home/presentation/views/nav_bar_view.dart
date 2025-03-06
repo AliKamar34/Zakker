@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_islamic_icons/flutter_islamic_icons.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:zaker/core/utils/app_colors.dart';
+import 'package:zaker/features/doaa/presentation/view/doaa_view.dart';
 import 'package:zaker/features/home/presentation/views/home_view.dart';
 import 'package:zaker/features/salah/presentation/views/salah_view.dart';
 import 'package:zaker/features/sebha/presentation/views/sebha_view.dart';
@@ -19,7 +20,7 @@ class _CustomNavBarState extends State<CustomNavBar> {
     HomeView(),
     SebhaView(),
     SalahView(),
-    Center(child: Text('التحديث القادم')),
+    DoaaView(),
   ];
   @override
   Widget build(BuildContext context) {
