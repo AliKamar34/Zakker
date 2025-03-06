@@ -4,8 +4,10 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:zaker/core/utils/app_colors.dart';
 import 'package:zaker/core/utils/app_routes.dart';
 import 'package:zaker/features/salah/presentation/manager/athan_cubit/athan_cubit.dart';
+import 'package:zaker/simple_bloc_observer.dart';
 
 void main() {
+  Bloc.observer = SimpleBlocObserver();
   runApp(const MyApp());
 }
 
@@ -14,8 +16,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => AthanCubit(),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(create: (context) => AthanCubit()..getTimePray()),
+      ],
       child: MaterialApp.router(
         locale: const Locale('ar'),
         supportedLocales: const [Locale('ar')],
