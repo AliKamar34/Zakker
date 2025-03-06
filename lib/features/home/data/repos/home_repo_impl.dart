@@ -20,7 +20,7 @@ class HomeRepoImpl extends HomeRepo {
     } else if (timeNow.isBefore(parseTimeIntoDateTime(prayesTime.isha))) {
       return NextPrayModel(name: 'العشاء', time: prayesTime.isha);
     } else {
-      return NextPrayModel(name: 'errrrr', time: 'eee');
+      return NextPrayModel(name: 'فجر اليوم التالي', time: prayesTime.fajr);
     }
   }
 }
