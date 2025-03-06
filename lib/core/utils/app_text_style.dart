@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 abstract class AppTextStyle {
-  static TextStyle styleRegular10(context) {
+  static TextStyle styleRegular22(context) {
     return TextStyle(
-      fontSize: getResponsiveFontSize(context, fontSize: 10),
+      fontSize: getResponsiveFontSize(context, fontSize: 22),
       fontWeight: FontWeight.w400,
     );
   }
