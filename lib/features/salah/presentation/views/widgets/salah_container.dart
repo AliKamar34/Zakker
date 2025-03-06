@@ -7,9 +7,11 @@ class CustomSalaContainer extends StatelessWidget {
     super.key,
     required this.time,
     required this.salah,
+    required this.sonah,
   });
   final String time;
   final String salah;
+  final String sonah;
 
   @override
   Widget build(BuildContext context) {
@@ -18,23 +20,43 @@ class CustomSalaContainer extends StatelessWidget {
       child: CustomContainer(
         child: Padding(
           padding: const EdgeInsets.all(12),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                salah,
-                style: AppTextStyle.styleRegular18(
-                  context,
-                ).copyWith(color: Colors.white),
-              ),
-              Text(
-                time,
-                style: AppTextStyle.styleRegular18(
-                  context,
-                ).copyWith(color: Colors.white),
-              ),
-            ],
+          child: ListTile(
+            title: Text(
+              salah,
+              style: AppTextStyle.styleRegular18(
+                context,
+              ).copyWith(color: Colors.white),
+            ),
+            subtitle: Text(
+              'سنته  :  $sonah',
+              style: AppTextStyle.styleRegular14(
+                context,
+              ).copyWith(color: Colors.white),
+            ),
+            trailing: Text(
+              time,
+              style: AppTextStyle.styleRegular18(
+                context,
+              ).copyWith(color: Colors.white),
+            ),
           ),
+          // Row(
+          //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          //   children: [
+          //     Text(
+          //       salah,
+          //       style: AppTextStyle.styleRegular18(
+          //         context,
+          //       ).copyWith(color: Colors.white),
+          //     ),
+          //     Text(
+          //       time,
+          //       style: AppTextStyle.styleRegular18(
+          //         context,
+          //       ).copyWith(color: Colors.white),
+          //     ),
+          //   ],
+          // ),
         ),
       ),
     );

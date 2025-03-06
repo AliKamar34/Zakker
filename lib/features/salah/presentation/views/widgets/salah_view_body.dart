@@ -1,8 +1,6 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:intl/intl.dart';
+import 'package:zaker/core/helper/time_formater.dart';
 import 'package:zaker/features/salah/presentation/manager/athan_cubit/athan_cubit.dart';
 import 'package:zaker/features/salah/presentation/views/widgets/salah_card.dart';
 import 'package:zaker/features/salah/presentation/views/widgets/salah_container.dart';
@@ -94,35 +92,40 @@ class SalahViewBody extends StatelessWidget {
                     '1435',
               ),
               SizedBox(height: 30),
-              CustomSalaContainer(time: formatTime(fajrTime), salah: 'الفجر'),
               CustomSalaContainer(
-                time: formatTime(sunriseTime),
+                time: formatTimeIntoString(fajrTime),
+                salah: 'الفجر',
+                sonah: 'ركعتان  قبل  الصلاة',
+              ),
+              CustomSalaContainer(
+                time: formatTimeIntoString(sunriseTime),
                 salah: 'الشروق',
+                sonah: ' هي  سنه',
               ),
-              CustomSalaContainer(time: formatTime(dhuhrTime), salah: 'الظهر'),
-              CustomSalaContainer(time: formatTime(asrTime), salah: 'العصر'),
               CustomSalaContainer(
-                time: formatTime(maghribTime),
-                salah: 'المغرب',
+                time: formatTimeIntoString(dhuhrTime),
+                salah: 'الظهر',
+                sonah: 'أربع  قبل  وركعتان  بعده',
               ),
-              CustomSalaContainer(time: formatTime(ishaTime), salah: 'العشاء'),
+              CustomSalaContainer(
+                time: formatTimeIntoString(asrTime),
+                salah: 'العصر',
+                sonah: ' ليس  له  سنه',
+              ),
+              CustomSalaContainer(
+                time: formatTimeIntoString(maghribTime),
+                salah: 'المغرب',
+                sonah: 'ركعتان  بعد  الصلاة',
+              ),
+              CustomSalaContainer(
+                time: formatTimeIntoString(ishaTime),
+                salah: 'العشاء',
+                sonah: 'ركعتان  بعد  الصلاة',
+              ),
             ],
           ),
         );
       },
     );
-  }
-}
-
-String formatTime(String time) {
-  try {
-    DateTime parsedTime = DateFormat('HH:mm').parse(time);
-
-    String formattedTime = DateFormat('hh:mm a', 'en').format(parsedTime);
-    formattedTime = formattedTime.replaceAll('AM', 'ص').replaceAll('PM', 'م');
-    return formattedTime;
-  } on Exception catch (e) {
-    log(e.toString());
-    return time;
   }
 }
