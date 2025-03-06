@@ -39,7 +39,14 @@ class NextPrayContainer extends StatelessWidget {
             } else if (state is NextPrayLoading) {
               return Center(child: CircularProgressIndicator());
             } else {
-              return Center(child: Text('error'));
+              return Center(
+                child: Text(
+                  'الرجاء التحقق من الاتصال بالانترنت والمحاوله مجددا',
+                  style: AppTextStyle.styleRegular14(
+                    context,
+                  ).copyWith(color: Colors.white),
+                ),
+              );
             }
           },
         ),

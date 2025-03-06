@@ -7,6 +7,7 @@ import 'package:zaker/core/widgets/custom_container.dart';
 import 'package:zaker/features/home/data/repos/home_repo_impl.dart';
 import 'package:zaker/features/home/presentation/manager/next_pray_cubit/next_pray_cubit.dart';
 import 'package:zaker/features/home/presentation/views/widgets/next_pray_container.dart';
+import 'package:zaker/features/home/presentation/views/widgets/random_azkar_container.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({super.key});
@@ -54,28 +55,7 @@ class HomeViewBody extends StatelessWidget {
                 ),
               ),
             ),
-            InkWell(
-              onTap: () {},
-              child: CustomContainer(
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 10,
-                    vertical: 40,
-                  ),
-                  child: ListTile(
-                    leading: Icon(
-                      FlutterIslamicIcons.prayer,
-                      size: 60,
-                      color: Colors.white,
-                    ),
-                    title: Text(
-                      'اذكار عشوائيه  ',
-                      style: TextStyle(color: Colors.white),
-                    ),
-                  ),
-                ),
-              ),
-            ),
+            RandomAzkarContainer(),
           ],
         ),
       ),
