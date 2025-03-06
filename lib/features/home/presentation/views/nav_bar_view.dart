@@ -19,7 +19,7 @@ class _CustomNavBarState extends State<CustomNavBar> {
     HomeView(),
     SebhaView(),
     SalahView(),
-    HomeView(),
+    Center(child: Text('التحديث القادم')),
   ];
   @override
   Widget build(BuildContext context) {

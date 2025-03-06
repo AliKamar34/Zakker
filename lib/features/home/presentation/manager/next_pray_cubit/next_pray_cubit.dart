@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:zaker/features/home/data/models/next_pray_model.dart';
 import 'package:zaker/features/home/data/repos/home_repo.dart';
-import 'package:zaker/features/salah/data/models/prayer_times_model.dart';
 import 'package:zaker/features/salah/presentation/manager/athan_cubit/athan_cubit.dart';
 
 part 'next_pray_state.dart';
