@@ -4,7 +4,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:zaker/core/utils/app_colors.dart';
 import 'package:zaker/core/utils/app_routes.dart';
 import 'package:zaker/features/salah/presentation/manager/athan_cubit/athan_cubit.dart';
-import 'package:zaker/simple_bloc_observer.dart';
+import 'package:zaker/core/helper/simple_bloc_observer.dart';
 
 void main() {
   Bloc.observer = SimpleBlocObserver();
